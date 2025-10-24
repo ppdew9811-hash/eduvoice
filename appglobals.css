@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97.6%; /* #F9FAFB */
+    --foreground: 222.2 84% 4.9%; /* #111827 */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 210 100% 65%; /* #4F9DFF - Biru muda */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 71% 77%; /* #9B8CFF - Ungu lembut */
+    --secondary-foreground: 0 0% 100%;
+    --accent: 156 71% 59%; /* #4AE39E - Hijau neon halus */
+    --accent-foreground: 0 0% 100%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%; /* #6B7280 */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 65%; /* Primary color */
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 0 0% 97.6%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 97.6%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 97.6%;
+    --primary: 210 100% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 71% 77%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 156 71% 59%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 210 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for AI EduVoice */
+.gradient-primary {
+  background: linear-gradient(135deg, #4F9DFF 0%, #9B8CFF 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #4AE39E 0%, #4F9DFF 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(79, 157, 255, 0.1), 0 2px 4px -1px rgba(79, 157, 255, 0.06);
+}
+
+.glow-effect {
+  box-shadow: 0 0 20px rgba(79, 157, 255, 0.3);
+}
+
+.loading-bar {
+  background: linear-gradient(90deg, #4F9DFF 0%, #9B8CFF 50%, #4AE39E 100%);
+  background-size: 200% 100%;
+  animation: gradient-shift 2s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(74, 227, 158, 0.5);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 20px rgba(74, 227, 158, 0.8);
+  }
+}
